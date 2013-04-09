@@ -24,13 +24,13 @@ public class DictionaryExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst�pil problem z cytatami - ktorys moglbyc niedomkniety!");
+				System.out.println("Wyst�pil problem z cytatami - ktorys moglbyc niedomkniety!");
 				break;
 			}
 		}
 		
 		// delete przyimki with length >= 3
-		String przyimki[] = {"dla", "poniewa�", "oraz", "dlatego", "nad", "poza", "przed", "ponad", "spoza", "pod", "kt�ry", "kt�ra", "kt�re", "kt�rych", "chocia�", "i�", "tych", "tamtych"};
+		String przyimki[] = {"dla", "poniewa�", "oraz", "dlatego", "nad", "poza", "przed", "ponad", "spoza", "pod", "kt�ry", "kt�ra", "kt�re", "kt�rych", "chocia�", "i�", "tych", "tamtych"};
 		for(String przyimek : przyimki)
 		{
 			paragraph = paragraph.replaceAll(" "+przyimek+" ", "");
@@ -43,7 +43,7 @@ public class DictionaryExtractor {
 	
 	public List<String> getWordsFromParagraph(String paragraph)
 	{
-		Pattern p = Pattern.compile("[\\w']{3,50}");
+		Pattern p = Pattern.compile("[\\wżźćńółęąśŻŹĆĄŚĘŁÓŃ']{3,50}");
 		Matcher m = p.matcher(paragraph);
 
 		List<String> words = new ArrayList<String>();
