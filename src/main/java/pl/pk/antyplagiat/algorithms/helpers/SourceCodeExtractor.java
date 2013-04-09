@@ -20,7 +20,7 @@ public class SourceCodeExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst¹pil problem z komentarzami - ktorys moglbyc niedomkniety!");
+				System.out.println("WystÄ…pil problem z komentarzami - ktorys moglbyc niedomkniety!");
 				break;
 			}
 		}
@@ -35,7 +35,7 @@ public class SourceCodeExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst¹pil problem z jednolinijkowymi komentarzami!");
+				System.out.println("WystÄ…pil problem z jednolinijkowymi komentarzami!");
 				break;
 			}
 		}
@@ -62,7 +62,7 @@ public class SourceCodeExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst¹pil problem podczas generowania listy bibliotek!");
+				System.out.println("WystÄ…pil problem podczas generowania listy bibliotek!");
 				break;
 			}
 		}
@@ -89,7 +89,7 @@ public class SourceCodeExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst¹pil problem z cudzyslowami!");
+				System.out.println("WystÄ…pil problem z cudzyslowami!");
 				break;
 			}
 		}
@@ -111,7 +111,7 @@ public class SourceCodeExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst¹pil problem podczas szukania metod!");
+				System.out.println("WystÄ…pil problem podczas szukania metod!");
 				break;
 			}
 		}
@@ -136,7 +136,7 @@ public class SourceCodeExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst¹pil problem podczas szukania zmiennych!");
+				System.out.println("WystÄ…pil problem podczas szukania zmiennych!");
 				break;
 			}
 		}
