@@ -24,13 +24,13 @@ public class DictionaryExtractor {
 			}
 			catch(StringIndexOutOfBoundsException ex)
 			{
-				System.out.println("Wyst�pil problem z cytatami - ktorys moglbyc niedomkniety!");
+				System.out.println("Wystąpil problem z cytatami - ktorys moglbyc niedomkniety!");
 				break;
 			}
 		}
 		
 		// delete przyimki with length >= 3
-		String przyimki[] = {"dla", "poniewa�", "oraz", "dlatego", "nad", "poza", "przed", "ponad", "spoza", "pod", "kt�ry", "kt�ra", "kt�re", "kt�rych", "chocia�", "i�", "tych", "tamtych"};
+		String przyimki[] = {"dla", "ponieważ", "oraz", "dlatego", "nad", "poza", "przed", "ponad", "spoza", "pod", "który", "która", "które", "których", "chociaż", "iż", "tych", "tamtych"};
 		for(String przyimek : przyimki)
 		{
 			paragraph = paragraph.replaceAll(" "+przyimek+" ", "");
