@@ -17,74 +17,67 @@ import javax.persistence.Table;
 @Table(name = "THESIS")
 public class Thesis implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(name = "AUTHOR", nullable = false)
+    private String author;
+    @Column(name = "TITLE", nullable = false)
+    private String title;
+    @Column(name = "DESCROPTION", nullable = true)
+    private String description;
+    @Column(name = "CREATION_DATE", nullable = false)
+    private Date creationDate;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "thesis", targetEntity = ThesisFile.class)
+    private Set<ThesisFile> thesisFiles;
 
-	@Id
-	@Column(name = "ID")
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	
-	@Column(name = "AUTHOR", nullable = false)
-	private String author;
-	
-	@Column(name = "TITLE", nullable = false)
-	private String title;
-	
-	@Column(name = "DESCROPTION", nullable = true)
-	private String description;
-	
-	@Column(name = "CREATION_DATE", nullable = false)
-	private Date creationDate;
-	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "thesis", targetEntity = ThesisFile.class)
-	private Set<ThesisFile> thesisFiles;
+    public Long getId() {
+        return id;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public String getAuthor() {
+        return author;
+    }
 
-	public String getAuthor() {
-		return author;
-	}
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
-	public void setAuthor(String author) {
-		this.author = author;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public Date getCreationDate() {
+        return creationDate;
+    }
 
-	public Date getCreationDate() {
-		return creationDate;
-	}
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
 
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
-	}
+    public Set<ThesisFile> getThesisFiles() {
+        return thesisFiles;
+    }
 
-	public Set<ThesisFile> getThesisFiles() {
-		return thesisFiles;
-	}
-
-	public void setThesisFiles(Set<ThesisFile> thesisFiles) {
-		this.thesisFiles = thesisFiles;
-	}
-	
+    public void setThesisFiles(Set<ThesisFile> thesisFiles) {
+        this.thesisFiles = thesisFiles;
+    }
 }
